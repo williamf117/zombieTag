@@ -46,11 +46,13 @@ public class camra : MonoBehaviour
         if (lookAt)
         {
             transform.LookAt(target);
+            
         }
         else
         {
             transform.rotation = target.rotation;
         }
+      
     }
 }
 
