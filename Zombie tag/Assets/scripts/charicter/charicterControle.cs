@@ -13,7 +13,7 @@ public class charicterControle : MonoBehaviour
     Timer timer;
     float slowDowTimer = 2;
     bool grounded = true;
-
+    Vector3 back;
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
 
@@ -43,7 +43,11 @@ public class charicterControle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (transform.position.y < 1)
+        {
+            grounded = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             jump();
         }
@@ -69,12 +73,13 @@ public class charicterControle : MonoBehaviour
             ani.SetBool("walking", false);
         }
 
-        //jumoing
+
 
 
 
         if (Input.GetAxis("Rotate") != 0)
         {
+            back.y = transform.rotation.y;
             transform.Rotate(0, 180 * Time.deltaTime * Input.GetAxis("Rotate"), 0);
             canRotate = false;
         }
@@ -153,12 +158,22 @@ public class charicterControle : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
+        string tag = coll.gameObject.tag;
+        switch (tag)
+        {
+            case "wall":
+                turnback();
+                break;
+            case "floor":
+                grounded = true;
+                break;
 
-        grounded = true;
+        }
+
 
     }
 
-  public void Move()
+    public void Move()
     {
         //increase speed based on button pushes
         if (currentspeed < maxSpeed)
@@ -167,5 +182,9 @@ public class charicterControle : MonoBehaviour
         }
         timer.Duration = slowDowTimer;
         timer.Run();
+    }
+    public void turnback()
+    {
+        transform.Rotate(back);
     }
 }
