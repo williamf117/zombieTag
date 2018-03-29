@@ -97,7 +97,9 @@ public class charicterControle : MonoBehaviour
 
 
         //Check if on android 
-#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+        //#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+        float dragDistance;
+        dragDistance = Screen.height * 15 / 100;
         if (Input.touchCount>0)
         {
             ani.SetBool("walking", true);
@@ -117,30 +119,35 @@ public class charicterControle : MonoBehaviour
             {
                 touchOrigin = myTouch.position;
             }
-            else if (myTouch.phase == TouchPhase.Ended )
+
+           
+
+        //dragDistance is 15% height of the screen
+        else if (myTouch.phase == TouchPhase.Ended && myTouch.deltaPosition.x > dragDistance || myTouch.deltaPosition.y > dragDistance)
+        {
+            Vector2 toucheEnd = myTouch.position;
+
+            float x = toucheEnd.x - touchOrigin.x;
+            float y = toucheEnd.y - touchOrigin.y;
+            touchOrigin.x = -1;
+            if (Mathf.Abs(x) > Mathf.Abs(y))
             {
-                Vector2 toucheEnd = myTouch.position;
-                float x = toucheEnd.x - touchOrigin.x;
-                float y = toucheEnd.y - touchOrigin.y;
-                touchOrigin.x = -1;
-                if (Mathf.Abs(x)> Mathf.Abs(y))
-                {
-                    //rotate depending if user swipes left or right
-                    transform.Rotate(0, 45 * x/Mathf.Abs(x), 0);
-                    
-                }
-                else if (Mathf.Abs(y)>Mathf.Abs(x))
-                {
-                        jump();
-                }
-         
+                //rotate depending if user swipes left or right
+                transform.Rotate(0, 90 * x / Mathf.Abs(x), 0);
+
+            }
+            else if (Mathf.Abs(y) > Mathf.Abs(x))
+            {
+                jump();
+            }
+        }
         }
         
    }
 #endif
 
 
-    }
+  
 
 
     /// <summary>
