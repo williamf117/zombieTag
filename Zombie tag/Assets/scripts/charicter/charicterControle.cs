@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class charicterControle : MonoBehaviour
 {
+    //movement suport 
     Rigidbody rb;
     bool canRotate = true;
     Animator ani;
     int baseSpeed = 0;
     int maxSpeed = 7;
     int currentspeed;
+    //timer
     Timer timer;
     float slowDowTimer = 2;
     bool grounded = true;
@@ -17,6 +19,8 @@ public class charicterControle : MonoBehaviour
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
 
+    //score 
+    int score; 
 
     Direction playerFacing;
 
@@ -51,6 +55,12 @@ public class charicterControle : MonoBehaviour
         {
             jump();
         }
+
+        if (transform.rotation.y % 90 != 0)
+        {
+            transform.Rotate(0, 0, 0);
+        }
+
 #if UNITY_EDITOR
         // move fowered if the user is pushing space 
         if (Input.GetKeyDown(KeyCode.W))
@@ -77,11 +87,17 @@ public class charicterControle : MonoBehaviour
 
 
 
-        if (Input.GetAxis("Rotate") != 0)
+        if (Input.GetKeyDown(KeyCode.A))
         {
             back.y = transform.rotation.y;
-            transform.Rotate(0, 180 * Time.deltaTime * Input.GetAxis("Rotate"), 0);
-            canRotate = false;
+            transform.Rotate(0, 90* Input.GetAxis("Rotate"), 0);
+            
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            back.y = transform.rotation.y;
+            transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+
         }
         if (Input.GetAxis("Rotate") == 0)
         {
@@ -97,7 +113,7 @@ public class charicterControle : MonoBehaviour
 
 
         //Check if on android 
-        //#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         float dragDistance;
         dragDistance = Screen.height * 15 / 100;
         if (Input.touchCount>0)
@@ -145,7 +161,7 @@ public class charicterControle : MonoBehaviour
         
    }
 #endif
-
+    }
 
   
 
@@ -176,7 +192,16 @@ public class charicterControle : MonoBehaviour
                 break;
 
         }
+        if (coll.gameObject.tag == "coin")
+        {
+            Destroy(coll.gameObject);
+            score++;
 
+        }
+        if (coll.gameObject.tag == "floor")
+        {
+            Center(coll.gameObject);
+        }
 
     }
 
@@ -194,4 +219,21 @@ public class charicterControle : MonoBehaviour
     {
         transform.Rotate(back);
     }
+
+  public int Score
+    {
+        get
+        {
+            return score;
+        }
+    }
+
+    void Center(GameObject road)
+    {
+        if (road.name == "road_I_1")
+        {
+            Debug.Log("road");
+        }
+    }
+
 }

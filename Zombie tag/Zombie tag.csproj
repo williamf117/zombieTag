@@ -109,8 +109,6 @@
     <Compile Include="Assets\3d models\Cars\Cartoon SportCar B01\Standard Assets\script\WheelEffects.cs" />
     <Compile Include="Assets\3d models\Cars\Tank\Scripts\CameraOrbit.cs" />
     <Compile Include="Assets\3d models\Cars\Tank\Scripts\SimpleControl.cs" />
-    <Compile Include="Assets\3d models\Coins\Scripts\CoinAnimation.cs" />
-    <Compile Include="Assets\3d models\Coins\Scripts\CoinPickUp.cs" />
     <Compile Include="Assets\3d models\Fire FX\Destroy.cs" />
     <Compile Include="Assets\3d models\Fire FX\Instantiate.cs" />
     <Compile Include="Assets\3d models\Fire FX\Lights.cs" />
@@ -154,8 +152,10 @@
     <Compile Include="Assets\scripts\animationControler.cs" />
     <Compile Include="Assets\scripts\charicter\camra.cs" />
     <Compile Include="Assets\scripts\charicter\charicterControle.cs" />
+    <Compile Include="Assets\scripts\CoinAnimation.cs" />
     <Compile Include="Assets\scripts\events\EventManager.cs" />
     <Compile Include="Assets\scripts\events\SpeedUpEvent.cs" />
+    <Compile Include="Assets\scripts\GameControler.cs" />
     <Compile Include="Assets\scripts\obstical.cs" />
     <Compile Include="Assets\scripts\Timer.cs" />
   </ItemGroup>
