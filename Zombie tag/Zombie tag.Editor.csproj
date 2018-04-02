@@ -143,6 +143,8 @@
     <Compile Include="Assets\3d models\Fire FX\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3d models\Cars\Heli1\Info.txt" />
+    <None Include="Assets\3d models\Cars\M3A1 Scout Car\readme.txt" />
     <None Include="Assets\3d models\Cars\Tank\README.txt" />
     <None Include="Assets\3d models\Cartoon_City_Mega-Pack\Park_pack\particles\Snow\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
     <None Include="Assets\3d models\Cartoon_City_Mega-Pack\Props_pack\Skyboxes\_skybox info.txt" />
