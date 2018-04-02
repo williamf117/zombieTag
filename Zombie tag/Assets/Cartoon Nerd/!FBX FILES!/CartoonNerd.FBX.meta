@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 426d9e3f29b64214988103d726026c00
+timeCreated: 1488364512
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CartoonNerd
+    100004: CNerd
+    100006: CNerd Footsteps
+    100008: CNerd Head
+    100010: CNerd HeadNub
+    100012: CNerd L Calf
+    100014: CNerd L Clavicle
+    100016: CNerd L Finger0
+    100018: CNerd L Finger0Nub
+    100020: CNerd L Finger1
+    100022: CNerd L Finger1Nub
+    100024: CNerd L Finger2
+    100026: CNerd L Finger2Nub
+    100028: CNerd L Finger3
+    100030: CNerd L Finger3Nub
+    100032: CNerd L Finger4
+    100034: CNerd L Finger4Nub
+    100036: CNerd L Foot
+    100038: CNerd L Forearm
+    100040: CNerd L Hand
+    100042: CNerd L Thigh
+    100044: CNerd L Toe0
+    100046: CNerd L Toe0Nub
+    100048: CNerd L UpperArm
+    100050: CNerd Neck
+    100052: CNerd Pelvis
+    100054: CNerd R Calf
+    100056: CNerd R Clavicle
+    100058: CNerd R Finger0
+    100060: CNerd R Finger0Nub
+    100062: CNerd R Finger1
+    100064: CNerd R Finger1Nub
+    100066: CNerd R Finger2
+    100068: CNerd R Finger2Nub
+    100070: CNerd R Finger3
+    100072: CNerd R Finger3Nub
+    100074: CNerd R Finger4
+    100076: CNerd R Finger4Nub
+    100078: CNerd R Foot
+    100080: CNerd R Forearm
+    100082: CNerd R Hand
+    100084: CNerd R Thigh
+    100086: CNerd R Toe0
+    100088: CNerd R Toe0Nub
+    100090: CNerd R UpperArm
+    100092: CNerd Spine
+    100094: CNerd Spine1
+    100096: CNerd_floor
+    400000: //RootNode
+    400002: CartoonNerd
+    400004: CNerd
+    400006: CNerd Footsteps
+    400008: CNerd Head
+    400010: CNerd HeadNub
+    400012: CNerd L Calf
+    400014: CNerd L Clavicle
+    400016: CNerd L Finger0
+    400018: CNerd L Finger0Nub
+    400020: CNerd L Finger1
+    400022: CNerd L Finger1Nub
+    400024: CNerd L Finger2
+    400026: CNerd L Finger2Nub
+    400028: CNerd L Finger3
+    400030: CNerd L Finger3Nub
+    400032: CNerd L Finger4
+    400034: CNerd L Finger4Nub
+    400036: CNerd L Foot
+    400038: CNerd L Forearm
+    400040: CNerd L Hand
+    400042: CNerd L Thigh
+    400044: CNerd L Toe0
+    400046: CNerd L Toe0Nub
+    400048: CNerd L UpperArm
+    400050: CNerd Neck
+    400052: CNerd Pelvis
+    400054: CNerd R Calf
+    400056: CNerd R Clavicle
+    400058: CNerd R Finger0
+    400060: CNerd R Finger0Nub
+    400062: CNerd R Finger1
+    400064: CNerd R Finger1Nub
+    400066: CNerd R Finger2
+    400068: CNerd R Finger2Nub
+    400070: CNerd R Finger3
+    400072: CNerd R Finger3Nub
+    400074: CNerd R Finger4
+    400076: CNerd R Finger4Nub
+    400078: CNerd R Foot
+    400080: CNerd R Forearm
+    400082: CNerd R Hand
+    400084: CNerd R Thigh
+    400086: CNerd R Toe0
+    400088: CNerd R Toe0Nub
+    400090: CNerd R UpperArm
+    400092: CNerd Spine
+    400094: CNerd Spine1
+    400096: CNerd_floor
+    4300000: CartoonNerd
+    9500000: //RootNode
+    13700000: CartoonNerd
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: CNerd Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Finger2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Finger3
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd L Finger4
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Finger2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Finger3
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CNerd R Finger4
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: CartoonNerd(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CartoonNerd
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd
+      position: {x: -0, y: 0.5545396, z: 0.030099487}
+      rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CNerd Footsteps
+      position: {x: -0, y: 0, z: -0.5514733}
+      rotation: {x: 0, y: 0, z: -0.7071063, w: 0.70710725}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd Pelvis
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.5045604, y: -0.49539766, z: -0.5045604, w: -0.49539766}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: CNerd L Thigh
+      position: {x: 0.000000076293944, y: 0.0000001168251, z: 0.06689194}
+      rotation: {x: 0.0054909955, y: 0.9812855, z: 0.1915007, w: 0.019392714}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: CNerd L Calf
+      position: {x: -0.2944928, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0.000000038927286, y: -3.5321752e-11, z: 0.046942975, w: 0.9988976}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd L Foot
+      position: {x: -0.18129669, y: -0.0000000023841857, z: 0.0000000047683715}
+      rotation: {x: -0.0007954602, y: 0.020148473, z: -0.04857114, w: 0.99861616}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Toe0
+      position: {x: -0.07692572, y: 0.09900001, z: 0.000000009536743}
+      rotation: {x: -0.000000015454312, y: 0.000000015454312, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Toe0Nub
+      position: {x: -0.089195356, y: 0, z: -0.000000009536743}
+      rotation: {x: -5.0627085e-16, y: -8.881784e-16, z: 1, w: -1.8375893e-15}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: CNerd R Thigh
+      position: {x: -0.000000076293944, y: -0.000000069141386, z: -0.06689194}
+      rotation: {x: 0.022287963, y: 0.9842735, z: -0.17374611, w: -0.022830611}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: CNerd R Calf
+      position: {x: -0.29449284, y: -0.0000000023841857, z: 0}
+      rotation: {x: -0.0000000086052365, y: -4.044012e-10, z: 0.04694298, w: 0.9988976}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: CNerd R Foot
+      position: {x: -0.18129666, y: 0, z: 0}
+      rotation: {x: 0.009750618, y: -0.027040748, z: -0.06458538, w: 0.9974981}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R Toe0
+      position: {x: -0.07692572, y: 0.09900001, z: 0.000000014305114}
+      rotation: {x: 0.000000015454313, y: -0.000000015454313, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R Toe0Nub
+      position: {x: -0.08919536, y: -2.9802322e-10, z: -0.000000009536743}
+      rotation: {x: -8.881784e-16, y: 5.062737e-16, z: 4.496614e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd Spine
+      position: {x: -0.04105362, y: -0.00013843774, z: -0.0000024803728}
+      rotation: {x: 0.00916135, y: 0.0000043421505, z: -0.00039814872, w: 0.999958}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd Spine1
+      position: {x: -0.17389488, y: -0.00013637543, z: -3.7824519e-10}
+      rotation: {x: -3.3582857e-14, y: -0.00000024169285, z: 0.08714047, w: 0.99619603}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Clavicle
+      position: {x: -0.096966475, y: 0.0066055106, z: 0.023412151}
+      rotation: {x: 0.70710677, y: 0.000281541, z: -0.70710677, w: 0.000281541}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L UpperArm
+      position: {x: -0.06765148, y: 0, z: 0}
+      rotation: {x: 0.1464514, y: -0.027737519, z: -0.018656371, w: 0.9886529}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Forearm
+      position: {x: -0.20856404, y: 0, z: -0.000000076293944}
+      rotation: {x: -0.002873808, y: 0.021094041, z: 0.055386875, w: 0.998238}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: CNerd L Hand
+      position: {x: -0.22651912, y: 0, z: 0}
+      rotation: {x: -0.70366144, y: 0.06680149, z: -0.06685471, w: 0.70422196}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger0
+      position: {x: -0.055216063, y: 0.01330658, z: -0.099955335}
+      rotation: {x: 0.070568785, y: -0.48403025, z: 0.07874621, w: 0.86863905}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd L Finger0Nub
+      position: {x: -0.076396346, y: 0, z: 0}
+      rotation: {x: 0.000000007450581, y: -0.0000000018626451, z: 1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger1
+      position: {x: -0.123713985, y: -0.009809494, z: -0.07697978}
+      rotation: {x: 0.051978994, y: -0.11920245, z: 0.022192592, w: 0.9912601}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd L Finger1Nub
+      position: {x: -0.063361205, y: 0, z: 0}
+      rotation: {x: 0.000000007450581, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger2
+      position: {x: -0.12759613, y: -0.022420807, z: -0.021740245}
+      rotation: {x: -0.003358422, y: -0.04574273, z: 0.01701435, w: 0.9988027}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger2Nub
+      position: {x: -0.07392135, y: 0.000000076293944, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0.0000000018626451, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger3
+      position: {x: -0.12409477, y: -0.01909729, z: 0.030872192}
+      rotation: {x: -0.0260255, y: -0.028589424, z: 0.048442107, w: 0.99807745}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger3Nub
+      position: {x: -0.07714998, y: 0, z: 0.000000009536743}
+      rotation: {x: 0.000000007450581, y: 0.000000007450581, z: -5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd L Finger4
+      position: {x: -0.09522232, y: -0.010711212, z: 0.08040735}
+      rotation: {x: -0.03425472, y: -0.029869765, z: 0.058887612, w: 0.9972295}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CNerd L Finger4Nub
+      position: {x: -0.06429166, y: 0, z: -0.000000038146972}
+      rotation: {x: -0.000000014901161, y: 0.0000000037252907, z: -0.000000014901161,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CNerd Neck
+      position: {x: -0.17392264, y: -0.0001115036, z: -3.0930095e-10}
+      rotation: {x: 4.0739195e-14, y: 0.00000004603974, z: -0.01659927, w: 0.99986225}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: CNerd Head
+      position: {x: -0.14012337, y: -0.000000009536743, z: 0}
+      rotation: {x: 1.435037e-13, y: 0.00000019469337, z: -0.07019449, w: 0.9975333}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: CNerd HeadNub
+      position: {x: -0.33270162, y: 0, z: -9.094947e-15}
+      rotation: {x: -4.1174657e-20, y: -3.3881318e-21, z: -1.39505e-40, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: CNerd R Clavicle
+      position: {x: -0.096966475, y: 0.0066056442, z: -0.023412118}
+      rotation: {x: 0.70710677, y: 0.00028154626, z: 0.70710677, w: -0.00028154626}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R UpperArm
+      position: {x: -0.06765147, y: 0, z: 0}
+      rotation: {x: -0.14722705, y: 0.028828971, z: -0.026589684, w: 0.9883249}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: CNerd R Forearm
+      position: {x: -0.20856407, y: -0.000000009536743, z: 0}
+      rotation: {x: 0.0030050564, y: -0.022057455, z: 0.05381869, w: 0.9983026}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: CNerd R Hand
+      position: {x: -0.22651908, y: 0, z: 0}
+      rotation: {x: 0.70366144, y: -0.066801496, z: -0.0668547, w: 0.70422196}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+      transformModified: 1
+    - name: CNerd R Finger0
+      position: {x: -0.05521614, y: 0.013306656, z: 0.09995533}
+      rotation: {x: -0.07018224, y: 0.48394758, z: 0.07928854, w: 0.86866707}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+      transformModified: 1
+    - name: CNerd R Finger0Nub
+      position: {x: -0.07639637, y: 0, z: 0}
+      rotation: {x: 1.110223e-16, y: 0.000000007450581, z: 1, w: 0.000000014901161}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: CNerd R Finger1
+      position: {x: -0.12371406, y: -0.009809418, z: 0.076979764}
+      rotation: {x: -0.051978987, y: 0.1192027, z: 0.022191932, w: 0.9912601}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: CNerd R Finger1Nub
+      position: {x: -0.063361205, y: 0, z: 0}
+      rotation: {x: 0.0000000018626451, y: -0.0000000037252903, z: 1, w: -0.000000014901161}
+      scale: {x: -1, y: -0.99999994, z: -1}
+      transformModified: 1
+    - name: CNerd R Finger2
+      position: {x: -0.12759613, y: -0.02242073, z: 0.021740241}
+      rotation: {x: 0.0033584225, y: 0.04574241, z: 0.017013708, w: 0.9988028}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R Finger2Nub
+      position: {x: -0.07392134, y: 0, z: 0.0000000047683715}
+      rotation: {x: -2.281082e-25, y: -0.0000000037252899, z: 1, w: 6.123234e-17}
+      scale: {x: -1, y: -1.0000001, z: -1.0000001}
+      transformModified: 1
+    - name: CNerd R Finger3
+      position: {x: -0.12409477, y: -0.019097213, z: -0.030872196}
+      rotation: {x: 0.026025375, y: 0.028589053, z: 0.048441954, w: 0.9980776}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R Finger3Nub
+      position: {x: -0.07714998, y: 0, z: 0.000000038146972}
+      rotation: {x: 0.000000011175871, y: 0.0000000074505815, z: 1, w: -0.000000014901161}
+      scale: {x: -1, y: -0.99999994, z: -1}
+      transformModified: 1
+    - name: CNerd R Finger4
+      position: {x: -0.09522228, y: -0.010711212, z: -0.08040733}
+      rotation: {x: 0.034255076, y: 0.029869623, z: 0.058888428, w: 0.99722946}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CNerd R Finger4Nub
+      position: {x: -0.06429161, y: 0, z: 0}
+      rotation: {x: -0.00000002235174, y: -0.000000014901161, z: 1, w: -2.7183453e-16}
+      scale: {x: -1.0000001, y: -1, z: -1}
+      transformModified: 1
+    - name: CNerd_floor
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

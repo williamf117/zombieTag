@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie tag", "Zombie tag.csproj", "{E5BB6D58-6514-9560-532B-94D431EA661C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie tag.Editor", "Zombie tag.Editor.csproj", "{ADD91161-6BC7-1FFD-F04D-F84345730224}"
