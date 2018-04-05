@@ -157,6 +157,7 @@
     <Compile Include="Assets\scripts\events\SpeedUpEvent.cs" />
     <Compile Include="Assets\scripts\GameControler.cs" />
     <Compile Include="Assets\scripts\obstical.cs" />
+    <Compile Include="Assets\scripts\road.cs" />
     <Compile Include="Assets\scripts\Timer.cs" />
   </ItemGroup>
   <ItemGroup>

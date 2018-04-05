@@ -47,6 +47,9 @@ public class charicterControle : MonoBehaviour
 
     private void Update()
     {
+        //lock angle to 90
+        lockangle();
+
         if (transform.position.y < 1)
         {
             grounded = true;
@@ -200,7 +203,7 @@ public class charicterControle : MonoBehaviour
         }
         if (coll.gameObject.tag == "floor")
         {
-            Center(coll.gameObject);
+           
         }
 
     }
@@ -228,12 +231,33 @@ public class charicterControle : MonoBehaviour
         }
     }
 
-    void Center(GameObject road)
+    public void lockangle()
     {
-        if (road.name == "road_I_1")
+
         {
-            Debug.Log("road");
+
+           // Debug.Log(transform.rotation.y);
+            if (transform.rotation.eulerAngles.y > 225 && transform.rotation.eulerAngles.y < 315)
+            {
+                transform.eulerAngles = new Vector3(0, 270, 0);
+                //Debug.Log("Q");
+            }
+            else if (transform.rotation.eulerAngles.y > 45 && transform.rotation.eulerAngles.y < 135)
+            {
+                transform.eulerAngles = new Vector3(0, 90, 0);
+            }
+            else if (transform.rotation.eulerAngles.y > 135 && transform.rotation.eulerAngles.y < 225)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (transform.rotation.eulerAngles.y > -45 && transform.rotation.eulerAngles.y < 45)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            // Debug.Log(transform.rotation);
+
+
+
         }
     }
-
 }
