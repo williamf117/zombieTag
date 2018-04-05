@@ -35,7 +35,7 @@ public class road : MonoBehaviour {
         if (collision.gameObject.tag == "Player") 
         {
             //collision.gameObject.GetComponent<charicterControle>().lockangle(horizontal);
-            Debug.Log(horizontal);
+           // Debug.Log(horizontal);
         }
     }
 

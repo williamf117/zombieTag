@@ -6,7 +6,7 @@ public class charicterControle : MonoBehaviour
 {
     //movement suport 
     Rigidbody rb;
-    bool canRotate = true;
+    bool canRotate = false;
     Animator ani;
     int baseSpeed = 0;
     int maxSpeed = 7;
@@ -15,6 +15,7 @@ public class charicterControle : MonoBehaviour
     Timer timer;
     float slowDowTimer = 2;
     bool grounded = true;
+    Timer turn;
     Vector3 back;
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
@@ -22,13 +23,7 @@ public class charicterControle : MonoBehaviour
     //score 
     int score; 
 
-    Direction playerFacing;
-
-    // an enumeration to control direction 
-    enum Direction
-    {
-        Right, Left, Back, Forwerd
-    }
+ 
 
     // Use this for initialization
     void Start()
@@ -43,6 +38,7 @@ public class charicterControle : MonoBehaviour
 
         //get a timer component
         timer = gameObject.AddComponent<Timer>();
+        turn = gameObject.AddComponent<Timer>();
     }
 
     private void Update()
@@ -63,7 +59,10 @@ public class charicterControle : MonoBehaviour
         {
             transform.Rotate(0, 0, 0);
         }
-
+        if (turn.Finished)
+        {
+            canRotate = false;
+        }
 #if UNITY_EDITOR
         // move fowered if the user is pushing space 
         if (Input.GetKeyDown(KeyCode.W))
@@ -89,23 +88,22 @@ public class charicterControle : MonoBehaviour
 
 
 
+        if (canRotate)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                back.y = transform.rotation.y;
+                transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            back.y = transform.rotation.y;
-            transform.Rotate(0, 90* Input.GetAxis("Rotate"), 0);
-            
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            back.y = transform.rotation.y;
-            transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                back.y = transform.rotation.y;
+                transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
 
+            }
         }
-        if (Input.GetAxis("Rotate") == 0)
-        {
-            canRotate = true;
-        }
+       
 
 
 
@@ -201,9 +199,11 @@ public class charicterControle : MonoBehaviour
             score++;
 
         }
-        if (coll.gameObject.tag == "floor")
+        if (coll.gameObject.tag == "turn")
         {
-           
+            canRotate = true;
+            turn.Duration = 2;
+            turn.Run();
         }
 
     }
