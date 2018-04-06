@@ -124,9 +124,12 @@
      <Compile Include="Assets\scripts\animationControler.cs" />
      <Compile Include="Assets\scripts\charicter\camra.cs" />
      <Compile Include="Assets\scripts\charicter\charicterControle.cs" />
+     <Compile Include="Assets\scripts\CoinAnimation.cs" />
      <Compile Include="Assets\scripts\events\EventManager.cs" />
      <Compile Include="Assets\scripts\events\SpeedUpEvent.cs" />
+     <Compile Include="Assets\scripts\GameControler.cs" />
      <Compile Include="Assets\scripts\obstical.cs" />
+     <Compile Include="Assets\scripts\road.cs" />
      <Compile Include="Assets\scripts\Timer.cs" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
@@ -197,6 +200,7 @@
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Cartoon Nerd\!FBX FILES!\Animations\Character_Animation_frames.txt" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\3d models\Fire FX\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />

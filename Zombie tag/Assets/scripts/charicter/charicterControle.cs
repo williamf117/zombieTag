@@ -17,6 +17,7 @@ public class charicterControle : MonoBehaviour
     bool grounded = true;
     Timer turn;
     Vector3 back;
+    Vector3 TurnCenter;
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
 
@@ -94,12 +95,14 @@ public class charicterControle : MonoBehaviour
             {
                 back.y = transform.rotation.y;
                 transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+                transform.position = TurnCenter;
 
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
                 back.y = transform.rotation.y;
                 transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+                transform.position = TurnCenter;
 
             }
         }
@@ -204,6 +207,7 @@ public class charicterControle : MonoBehaviour
             canRotate = true;
             turn.Duration = 2;
             turn.Run();
+            TurnCenter = coll.gameObject.transform.position;
         }
 
     }
