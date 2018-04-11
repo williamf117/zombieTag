@@ -21,6 +21,12 @@ public class charicterControle : MonoBehaviour
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
 
+    //ai nodes 
+    [SerializeField]
+    GameObject left;
+    [SerializeField]
+    GameObject right;
+
     //score 
     int score; 
 
@@ -96,6 +102,8 @@ public class charicterControle : MonoBehaviour
                 back.y = transform.rotation.y;
                 transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
                 transform.position = TurnCenter;
+                Instantiate(right, transform.position, Quaternion.identity);
+
 
             }
             if (Input.GetKeyDown(KeyCode.D))
@@ -103,6 +111,7 @@ public class charicterControle : MonoBehaviour
                 back.y = transform.rotation.y;
                 transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
                 transform.position = TurnCenter;
+                Instantiate(left, transform.position, Quaternion.identity);
 
             }
         }
@@ -234,7 +243,9 @@ public class charicterControle : MonoBehaviour
             return score;
         }
     }
-
+    /// <summary>
+    /// fixes the angle to 90 180 270 and 0
+    /// </summary>
     public void lockangle()
     {
 
