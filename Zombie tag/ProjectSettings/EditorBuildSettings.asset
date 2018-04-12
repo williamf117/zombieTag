@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/HelpMenu.unity
     guid: fd2def52bb1f9cf439e9607ff5195ce6
+  - enabled: 1
+    path: Assets/scenes/GPSMenu.unity
+    guid: b58a416754f0d9741ab3924f40e0cac4

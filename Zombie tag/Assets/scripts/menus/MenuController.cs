@@ -23,6 +23,12 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("City_scene_winter");
     }
 
+    // Called when changing scene to the game
+    public void LoadGPSMenu()
+    {
+        SceneManager.LoadScene("GPSMenu");
+    }
+
     // Called when changing scene to the control menu
     public void LoadControls()
     {

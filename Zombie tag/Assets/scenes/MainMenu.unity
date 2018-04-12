@@ -848,7 +848,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 76450471}
-        m_MethodName: LoadDemoLevel
+        m_MethodName: LoadGPSMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

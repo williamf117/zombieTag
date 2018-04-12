@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/City_scene_winter.unity
+- path: Assets/scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1
