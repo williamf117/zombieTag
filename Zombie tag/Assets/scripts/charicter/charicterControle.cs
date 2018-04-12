@@ -41,7 +41,7 @@ public class charicterControle : MonoBehaviour
 
         //get the animator
         ani = GetComponent<Animator>();
-        ani.SetBool("walking", false);
+        ani.SetFloat("runspeed", 0);
 
         //get a timer component
         timer = gameObject.AddComponent<Timer>();
@@ -74,15 +74,7 @@ public class charicterControle : MonoBehaviour
         // move fowered if the user is pushing space 
         if (Input.GetKeyDown(KeyCode.W))
         {
-
-            ani.SetBool("walking", true);
-            //increase speed based on button pushes
-            if (currentspeed < maxSpeed)
-            {
-                currentspeed += 1;
-            }
-            timer.Duration = slowDowTimer;
-            timer.Run();
+            Move();
         }
         //speed up and slow down based on taps one the fored key
         transform.position += transform.forward * Time.deltaTime * currentspeed;
@@ -230,6 +222,7 @@ public class charicterControle : MonoBehaviour
         }
         timer.Duration = slowDowTimer;
         timer.Run();
+        ani.SetFloat("runspeed", currentspeed);
     }
     public void turnback()
     {
