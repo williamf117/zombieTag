@@ -129,6 +129,7 @@
      <Compile Include="Assets\scripts\events\EventManager.cs" />
      <Compile Include="Assets\scripts\events\SpeedUpEvent.cs" />
      <Compile Include="Assets\scripts\GameControler.cs" />
+     <Compile Include="Assets\scripts\menus\BlinkingText.cs" />
      <Compile Include="Assets\scripts\menus\MenuController.cs" />
      <Compile Include="Assets\scripts\obstical.cs" />
      <Compile Include="Assets\scripts\road.cs" />

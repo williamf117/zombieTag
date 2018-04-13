@@ -81,7 +81,7 @@ public class charicterControle : MonoBehaviour
         if (timer.Finished)
         {
             currentspeed = baseSpeed;
-            ani.SetBool("walking", false);
+            ani.SetFloat("movespeed", currentspeed);
         }
 
 
@@ -91,23 +91,16 @@ public class charicterControle : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                back.y = transform.rotation.y;
-                transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
-                transform.position = TurnCenter;
-                Instantiate(right, transform.position, Quaternion.identity);
 
-
+                TurnLeft();
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                back.y = transform.rotation.y;
-                transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
-                transform.position = TurnCenter;
-                Instantiate(left, transform.position, Quaternion.identity);
+                TurnRight();
 
             }
         }
-       
+
 
 
 
@@ -151,10 +144,20 @@ public class charicterControle : MonoBehaviour
             float x = toucheEnd.x - touchOrigin.x;
             float y = toucheEnd.y - touchOrigin.y;
             touchOrigin.x = -1;
-            if (Mathf.Abs(x) > Mathf.Abs(y))
+            if (Mathf.Abs(x) > Mathf.Abs(y) && canRotate )
             {
                 //rotate depending if user swipes left or right
                 transform.Rotate(0, 90 * x / Mathf.Abs(x), 0);
+                 back.y = transform.rotation.y;
+                transform.position = TurnCenter;
+                if(x>0)
+                {
+                 Instantiate(left, transform.position, Quaternion.identity);
+                 }
+                else if(x>0)
+                {
+                 Instantiate(left, transform.position, Quaternion.identity);
+                 }
 
             }
             else if (Mathf.Abs(y) > Mathf.Abs(x))
@@ -162,13 +165,13 @@ public class charicterControle : MonoBehaviour
                 jump();
             }
         }
-        }
+        
         
    }
 #endif
     }
 
-  
+
 
 
     /// <summary>
@@ -267,5 +270,21 @@ public class charicterControle : MonoBehaviour
 
 
         }
+    }
+
+
+    void TurnRight()
+    {
+        back.y = transform.rotation.y;
+        transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+        transform.position = TurnCenter;
+        Instantiate(left, transform.position, Quaternion.identity);
+    }
+    void TurnLeft()
+    {
+        back.y = transform.rotation.y;
+        transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
+        transform.position = TurnCenter;
+        Instantiate(right, transform.position, Quaternion.identity);
     }
 }
