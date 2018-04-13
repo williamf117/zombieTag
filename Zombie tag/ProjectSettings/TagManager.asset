@@ -7,6 +7,8 @@ TagManager:
   - floor
   - coin
   - turn
+  - left
+  - Right
   layers:
   - Default
   - TransparentFX

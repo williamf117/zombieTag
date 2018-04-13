@@ -5,11 +5,15 @@ using UnityEngine;
 public class AIControler : MonoBehaviour {
     int runspeed = 6;
     Timer starttimer;
+    //check if it can turn 
+    bool turn = true;
+    //center every turn
+    Vector3 TurnCenter;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         starttimer = gameObject.AddComponent<Timer>();
-        starttimer.Duration = 10;
+        starttimer.Duration = 4;
         starttimer.Run();
 	}
 	
@@ -26,29 +30,40 @@ public class AIControler : MonoBehaviour {
     }
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == "turn")
-        {
-            transform.position = coll.gameObject.transform.position;
-        }
+       
         if (coll.gameObject.tag == "coin")
         {
             Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
-        if (coll.gameObject.name=="righ")
+        if (coll.gameObject.tag=="left")
         {
           
-            transform.Rotate(0, -90 , 0);
+            transform.Rotate(0,  - 90 , 0);
+            TurnCenter = coll.gameObject.transform.position;
+            Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             Destroy(coll.gameObject);
-            
+            turn = false;
 
         }
         
-        if (coll.gameObject.name=="Right")
+        if (coll.gameObject.tag=="Right")
         {
-            transform.Rotate(0, 90 , 0);
+            transform.Rotate(0,+ 90 , 0);
+            Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+            //center on turn
+            TurnCenter = coll.gameObject.transform.position;
             Destroy(coll.gameObject);
-           
+            
+
+            turn = false;
+
         }
+
+        if (coll.gameObject.tag == "floor")
+        {
+            turn = true;
+        }
+
      
     }
 

@@ -41,7 +41,7 @@ public class charicterControle : MonoBehaviour
 
         //get the animator
         ani = GetComponent<Animator>();
-        ani.SetFloat("runspeed", 0);
+        ani.SetInteger("runspeed", 0);
 
         //get a timer component
         timer = gameObject.AddComponent<Timer>();
@@ -81,7 +81,7 @@ public class charicterControle : MonoBehaviour
         if (timer.Finished)
         {
             currentspeed = baseSpeed;
-            ani.SetFloat("movespeed", currentspeed);
+            ani.SetInteger("runspeed", currentspeed);
         }
 
 
@@ -116,7 +116,7 @@ public class charicterControle : MonoBehaviour
         dragDistance = Screen.height * 15 / 100;
         if (Input.touchCount>0)
         {
-            ani.SetBool("walking", true);
+            ani.integer("runspeed", currentspeed);
             //increase speed based on button pushes
             if (currentspeed < maxSpeed)
             {
@@ -193,7 +193,7 @@ public class charicterControle : MonoBehaviour
         switch (tag)
         {
             case "wall":
-                turnback();
+                currentspeed = 0;
                 break;
             case "floor":
                 grounded = true;
@@ -209,7 +209,7 @@ public class charicterControle : MonoBehaviour
         if (coll.gameObject.tag == "turn")
         {
             canRotate = true;
-            turn.Duration = 2;
+            turn.Duration = .5f;
             turn.Run();
             TurnCenter = coll.gameObject.transform.position;
         }
@@ -225,13 +225,10 @@ public class charicterControle : MonoBehaviour
         }
         timer.Duration = slowDowTimer;
         timer.Run();
-        ani.SetFloat("runspeed", currentspeed);
+        ani.SetInteger("runspeed", currentspeed);
     }
-    public void turnback()
-    {
-        transform.Rotate(back);
-    }
-
+ 
+    //alow game controler to see score 
   public int Score
     {
         get
@@ -278,13 +275,13 @@ public class charicterControle : MonoBehaviour
         back.y = transform.rotation.y;
         transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
         transform.position = TurnCenter;
-        Instantiate(left, transform.position, Quaternion.identity);
+        Instantiate(right, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
     }
     void TurnLeft()
     {
         back.y = transform.rotation.y;
         transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
         transform.position = TurnCenter;
-        Instantiate(right, transform.position, Quaternion.identity);
+        Instantiate(left,new Vector3 (transform.position.x,1,transform.position.z), Quaternion.identity);
     }
 }
