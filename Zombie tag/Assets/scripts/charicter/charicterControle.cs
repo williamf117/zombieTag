@@ -213,6 +213,10 @@ public class charicterControle : MonoBehaviour
             turn.Run();
             TurnCenter = coll.gameObject.transform.position;
         }
+        if (coll.gameObject.tag == "Right" || coll.gameObject.tag == "left")
+        {
+            Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
 
     }
 
