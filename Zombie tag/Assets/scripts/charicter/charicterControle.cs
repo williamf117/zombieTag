@@ -29,12 +29,17 @@ public class charicterControle : MonoBehaviour
 
     //score 
     int score; 
-
+        
+    //sound support
+    public AudioClip MusicClip;
+    public AudioSource MusicSource;
  
 
     // Use this for initialization
     void Start()
     {
+        //set soundmixer up
+        MusicSource.clip = MusicClip;
 
         //get the rigid body
         rb = GetComponent<Rigidbody>();
@@ -198,13 +203,12 @@ public class charicterControle : MonoBehaviour
             case "floor":
                 grounded = true;
                 break;
-
         }
         if (coll.gameObject.tag == "coin")
         {
             Destroy(coll.gameObject);
             score++;
-
+            MusicSource.Play();
         }
         if (coll.gameObject.tag == "turn")
         {

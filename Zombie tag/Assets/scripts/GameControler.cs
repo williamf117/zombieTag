@@ -11,18 +11,17 @@ public class GameControler : MonoBehaviour {
     [SerializeField]
     Text playerscore;
     int intScore;
-       
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         //set score
         playerscore.text = "Coins: 0";
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        //change score
+        //change score and play sound 
         intScore = player.GetComponent<charicterControle>().Score;
         playerscore.text ="Coins: "+ intScore;
-	}
+    }
 }

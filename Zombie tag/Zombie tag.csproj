@@ -357,6 +357,7 @@
     <Compile Include="Assets\scripts\charicter\camra.cs" />
     <Compile Include="Assets\scripts\charicter\charicterControle.cs" />
     <Compile Include="Assets\scripts\CoinAnimation.cs" />
+    <Compile Include="Assets\scripts\events\AudioManager.cs" />
     <Compile Include="Assets\scripts\events\EventManager.cs" />
     <Compile Include="Assets\scripts\events\SpeedUpEvent.cs" />
     <Compile Include="Assets\scripts\events\TimerScript.cs" />
