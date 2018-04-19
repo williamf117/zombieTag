@@ -10,7 +10,7 @@ public class charicterControle : MonoBehaviour
     Animator ani;
     int baseSpeed = 0;
     int maxSpeed = 7;
-    int currentspeed=5;
+    int currentspeed;
     //timer
     Timer timer;
     float slowDowTimer = 2;
@@ -75,7 +75,7 @@ public class charicterControle : MonoBehaviour
         {
             canRotate = false;
         }
-//#if UNITY_EDITOR || UNITY_STANDALONE
+#if UNITY_EDITOR
         // move fowered if the user is pushing space 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -110,21 +110,22 @@ public class charicterControle : MonoBehaviour
 
 
 
+        // Update is called once per frame
 
 
 
 
         //Check if on android 
-//# UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         float dragDistance;
-        dragDistance = Screen.width * 15 / 100;
+        dragDistance = Screen.height * 15 / 100;
         if (Input.touchCount>0)
         {
-            ani.SetInteger("runspeed", currentspeed);
+            ani.integer("runspeed", currentspeed);
             //increase speed based on button pushes
             if (currentspeed < maxSpeed)
             {
-                Move();
+                currentspeed += 1;
             }
             timer.Duration = slowDowTimer;
             timer.Run();
@@ -138,43 +139,41 @@ public class charicterControle : MonoBehaviour
                 touchOrigin = myTouch.position;
             }
 
+           
 
+        //dragDistance is 15% height of the screen
+        else if (myTouch.phase == TouchPhase.Ended && myTouch.deltaPosition.x > dragDistance || myTouch.deltaPosition.y > dragDistance)
+        {
+            Vector2 toucheEnd = myTouch.position;
 
-            //dragDistance is 15% height of the screen
-            else if (myTouch.phase == TouchPhase.Ended && myTouch.deltaPosition.x > dragDistance || myTouch.deltaPosition.y > dragDistance)
+            float x = toucheEnd.x - touchOrigin.x;
+            float y = toucheEnd.y - touchOrigin.y;
+            touchOrigin.x = -1;
+            if (Mathf.Abs(x) > Mathf.Abs(y) && canRotate )
             {
-                Vector2 toucheEnd = myTouch.position;
-
-                float x = toucheEnd.x - touchOrigin.x;
-                float y = toucheEnd.y - touchOrigin.y;
-                touchOrigin.x = -1;
-                if (Mathf.Abs(x) > Mathf.Abs(y) && canRotate)
+                //rotate depending if user swipes left or right
+                transform.Rotate(0, 90 * x / Mathf.Abs(x), 0);
+                 back.y = transform.rotation.y;
+                transform.position = TurnCenter;
+                if(x>0)
                 {
-                    //rotate depending if user swipes left or right
-                    
-                   
-                    transform.position = TurnCenter;
-                    if (x > 0)
-                    {
-                        TurnLeft ();
-                        Instantiate(left, transform.position, Quaternion.identity);
-                    }
-                    else if (x > 0)
-                    {
-                            TurnRight();
-                        Instantiate(left, transform.position, Quaternion.identity);
-                    }
-
-                }
-                else if (Mathf.Abs(y) > Mathf.Abs(x))
+                 Instantiate(left, transform.position, Quaternion.identity);
+                 }
+                else if(x>0)
                 {
-                    jump();
-                }
+                 Instantiate(left, transform.position, Quaternion.identity);
+                 }
+
             }
-
-
+            else if (Mathf.Abs(y) > Mathf.Abs(x))
+            {
+                jump();
+            }
         }
-//#endif
+        
+        
+   }
+#endif
     }
 
 
@@ -205,25 +204,23 @@ public class charicterControle : MonoBehaviour
                 grounded = true;
                 break;
         }
-         if (coll.gameObject.tag == "coin")
+        if (coll.gameObject.tag == "coin")
         {
             Destroy(coll.gameObject);
             score++;
             MusicSource.Play();
         }
-        else if (coll.gameObject.tag == "turn")
+        if (coll.gameObject.tag == "turn")
         {
-            Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             canRotate = true;
             turn.Duration = .5f;
             turn.Run();
             TurnCenter = coll.gameObject.transform.position;
         }
-        else if (coll.gameObject.tag == "Right" || coll.gameObject.tag == "left")
+        if (coll.gameObject.tag == "Right" || coll.gameObject.tag == "left")
         {
             Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
-        Debug.Log(currentspeed);
 
     }
 

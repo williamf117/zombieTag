@@ -5,21 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/3d models/Cartoon_City_Mega-Pack/scenes/City_scene_summer.unity
     guid: 42ae40064f906f149a05bd8f83a14364
-  - enabled: 0
+  - enabled: 1
     path: Assets/scenes/mall.unity
     guid: d1b54eada0e1cff4bb9b97dceb7d2517
   - enabled: 1
     path: Assets/scenes/MainMenu.unity
     guid: 698c1ceb46a6f2f45892aa855f21f4f1
   - enabled: 1
-    path: Assets/scenes/GPSMenu.unity
-    guid: b58a416754f0d9741ab3924f40e0cac4
+    path: Assets/scenes/City_scene_winter.unity
+    guid: d15a036b228229f479c78f6183072130
   - enabled: 1
     path: Assets/scenes/HelpMenu.unity
     guid: fd2def52bb1f9cf439e9607ff5195ce6
   - enabled: 1
-    path: Assets/scenes/City_scene_winter.unity
-    guid: d15a036b228229f479c78f6183072130
+    path: Assets/scenes/GPSMenu.unity
+    guid: b58a416754f0d9741ab3924f40e0cac4
