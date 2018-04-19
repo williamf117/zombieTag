@@ -10,7 +10,7 @@ public class charicterControle : MonoBehaviour
     Animator ani;
     int baseSpeed = 0;
     int maxSpeed = 7;
-    int currentspeed;
+    int currentspeed = 5;
     //timer
     Timer timer;
     float slowDowTimer = 2;
@@ -28,12 +28,12 @@ public class charicterControle : MonoBehaviour
     GameObject right;
 
     //score 
-    int score; 
-        
+    int score;
+
     //sound support
     public AudioClip MusicClip;
     public AudioSource MusicSource;
- 
+
 
     // Use this for initialization
     void Start()
@@ -75,7 +75,7 @@ public class charicterControle : MonoBehaviour
         {
             canRotate = false;
         }
-#if UNITY_EDITOR
+        //#if UNITY_EDITOR || UNITY_STANDALONE
         // move fowered if the user is pushing space 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -110,22 +110,20 @@ public class charicterControle : MonoBehaviour
 
 
 
-        // Update is called once per frame
 
 
 
 
         //Check if on android 
-#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
-        float dragDistance;
-        dragDistance = Screen.height * 15 / 100;
-        if (Input.touchCount>0)
+        //# UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+      
+        if (Input.touchCount > 0)
         {
-            ani.integer("runspeed", currentspeed);
+            ani.SetInteger("runspeed", currentspeed);
             //increase speed based on button pushes
             if (currentspeed < maxSpeed)
             {
-                currentspeed += 1;
+                Move();
             }
             timer.Duration = slowDowTimer;
             timer.Run();
@@ -139,41 +137,43 @@ public class charicterControle : MonoBehaviour
                 touchOrigin = myTouch.position;
             }
 
-           
 
-        //dragDistance is 15% height of the screen
-        else if (myTouch.phase == TouchPhase.Ended && myTouch.deltaPosition.x > dragDistance || myTouch.deltaPosition.y > dragDistance)
-        {
-            Vector2 toucheEnd = myTouch.position;
 
-            float x = toucheEnd.x - touchOrigin.x;
-            float y = toucheEnd.y - touchOrigin.y;
-            touchOrigin.x = -1;
-            if (Mathf.Abs(x) > Mathf.Abs(y) && canRotate )
+            //dragDistance is 15% height of the screen
+            else if (myTouch.phase == TouchPhase.Ended )
             {
-                //rotate depending if user swipes left or right
-                transform.Rotate(0, 90 * x / Mathf.Abs(x), 0);
-                 back.y = transform.rotation.y;
-                transform.position = TurnCenter;
-                if(x>0)
-                {
-                 Instantiate(left, transform.position, Quaternion.identity);
-                 }
-                else if(x>0)
-                {
-                 Instantiate(left, transform.position, Quaternion.identity);
-                 }
+                Vector2 toucheEnd = myTouch.position;
 
+                float x = toucheEnd.x - touchOrigin.x;
+                float y = toucheEnd.y - touchOrigin.y;
+                touchOrigin.x = -1;
+                if (Mathf.Abs(x) > Mathf.Abs(y) && canRotate)
+                {
+                    //rotate depending if user swipes left or right
+
+
+                    transform.position = TurnCenter;
+                    if (x > 0)
+                    {
+                        TurnLeft();
+                        Instantiate(left, transform.position, Quaternion.identity);
+                    }
+                    else if (x > 0)
+                    {
+                        TurnRight();
+                        Instantiate(left, transform.position, Quaternion.identity);
+                    }
+
+                }
+                else if (Mathf.Abs(y) > Mathf.Abs(x))
+                {
+                    jump();
+                }
             }
-            else if (Mathf.Abs(y) > Mathf.Abs(x))
-            {
-                jump();
-            }
+
+
         }
-        
-        
-   }
-#endif
+        //#endif
     }
 
 
@@ -210,17 +210,19 @@ public class charicterControle : MonoBehaviour
             score++;
             MusicSource.Play();
         }
-        if (coll.gameObject.tag == "turn")
+        else if (coll.gameObject.tag == "turn")
         {
+            Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             canRotate = true;
             turn.Duration = .5f;
             turn.Run();
             TurnCenter = coll.gameObject.transform.position;
         }
-        if (coll.gameObject.tag == "Right" || coll.gameObject.tag == "left")
+        else if (coll.gameObject.tag == "Right" || coll.gameObject.tag == "left")
         {
             Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
+        Debug.Log(currentspeed);
 
     }
 
@@ -235,9 +237,9 @@ public class charicterControle : MonoBehaviour
         timer.Run();
         ani.SetInteger("runspeed", currentspeed);
     }
- 
+
     //alow game controler to see score 
-  public int Score
+    public int Score
     {
         get
         {
@@ -252,7 +254,7 @@ public class charicterControle : MonoBehaviour
 
         {
 
-           // Debug.Log(transform.rotation.y);
+            // Debug.Log(transform.rotation.y);
             if (transform.rotation.eulerAngles.y > 225 && transform.rotation.eulerAngles.y < 315)
             {
                 transform.eulerAngles = new Vector3(0, 270, 0);
@@ -290,6 +292,6 @@ public class charicterControle : MonoBehaviour
         back.y = transform.rotation.y;
         transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
         transform.position = TurnCenter;
-        Instantiate(left,new Vector3 (transform.position.x,1,transform.position.z), Quaternion.identity);
+        Instantiate(left, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
     }
 }
