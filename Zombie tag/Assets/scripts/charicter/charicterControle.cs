@@ -222,7 +222,7 @@ public class charicterControle : MonoBehaviour
         {
             Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
-        Debug.Log(currentspeed);
+        
 
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AIControler : MonoBehaviour {
     int runspeed = 6;
@@ -9,12 +10,18 @@ public class AIControler : MonoBehaviour {
     bool turn = true;
     //center every turn
     Vector3 TurnCenter;
+    Animator ani;
 
     // Use this for initialization
     void Start () {
         starttimer = gameObject.AddComponent<Timer>();
         starttimer.Duration = 4;
         starttimer.Run();
+
+        //animation
+        ani = GetComponent<Animator>();
+        ani.SetInteger("runspeed", 6);
+
 	}
 	
 	// Update is called once per frame
@@ -57,6 +64,10 @@ public class AIControler : MonoBehaviour {
 
             turn = false;
 
+        }
+        if (coll.gameObject.tag == "player")
+        {
+            SceneManager.LoadScene("MainMenu");
         }
 
         if (coll.gameObject.tag == "floor")
