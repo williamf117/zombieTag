@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AIControler : MonoBehaviour {
-    int runspeed = 6;
+    int runspeed = 8;
     Timer starttimer;
     //check if it can turn 
     bool turn = true;
@@ -65,8 +65,9 @@ public class AIControler : MonoBehaviour {
             turn = false;
 
         }
-        if (coll.gameObject.tag == "player")
+        if (coll.gameObject.tag == "Player")
         {
+            Time.timeScale = 0;
             SceneManager.LoadScene("MainMenu");
         }
 
