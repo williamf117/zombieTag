@@ -10,7 +10,7 @@ public class charicterControle : MonoBehaviour
     Animator ani;
     int baseSpeed = 0;
     int maxSpeed = 7;
-    int currentspeed = 5;
+    int currentspeed = 0;
     //timer
     Timer timer;
     float slowDowTimer = 2;
@@ -20,6 +20,8 @@ public class charicterControle : MonoBehaviour
     Vector3 TurnCenter;
     //touch suport
     Vector2 touchOrigin = -Vector2.one;
+
+    Timer speedupTImer;
 
     //ai nodes 
     [SerializeField]
@@ -51,6 +53,7 @@ public class charicterControle : MonoBehaviour
         //get a timer component
         timer = gameObject.AddComponent<Timer>();
         turn = gameObject.AddComponent<Timer>();
+        speedupTImer = gameObject.AddComponent<Timer>();
     }
 
     private void Update()
@@ -74,6 +77,10 @@ public class charicterControle : MonoBehaviour
         if (turn.Finished)
         {
             canRotate = false;
+        }
+        if (speedupTImer.Finished)
+        {
+            maxSpeed = 7;
         }
         //#if UNITY_EDITOR || UNITY_STANDALONE
         // move fowered if the user is pushing space 
@@ -222,6 +229,11 @@ public class charicterControle : MonoBehaviour
         {
             Physics.IgnoreCollision(coll.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
+        else if (coll.gameObject.tag == "speed")
+        {
+            speedUp();
+            Destroy(coll.gameObject);
+        }
         
 
     }
@@ -293,5 +305,13 @@ public class charicterControle : MonoBehaviour
         transform.Rotate(0, 90 * Input.GetAxis("Rotate"), 0);
         transform.position = TurnCenter;
         Instantiate(left, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);
+    }
+
+    void speedUp()
+    {
+       
+        speedupTImer.Duration = 5;
+        speedupTImer.Run();
+        maxSpeed = 10;
     }
 }

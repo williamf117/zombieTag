@@ -9,6 +9,7 @@ TagManager:
   - turn
   - left
   - Right
+  - speed
   layers:
   - Default
   - TransparentFX
